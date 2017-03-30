@@ -20,6 +20,7 @@ var app = new Vue({
 		negation:[],
 		sentiment:[],
 		ukus:[],
+		types:[],
 	},
 	watch:{
 		"input":function(input){
@@ -28,6 +29,7 @@ var app = new Vue({
 			app.negation = instance.negation();
 			app.sentiment = instance.sentiment();
 			app.ukus = instance.tokenScores();
+			app.types = instance.sentenceType();
 			if(!app.abbr) {
 				instance.sentences = instance.sentences.map((sentence,sentenceIndex)=>{
 					sentence.tags = sentence.tags.map(x=>dict.POS[x]);
