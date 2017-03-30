@@ -128,3 +128,12 @@ div.token {
 	stroke: #E0E0E0;
 	stroke-width: 2px;
 }
+
+#app {
+	display:none;
+}
+
+.loading {
+	text-align: center;
+	margin-top:20vh;
+}

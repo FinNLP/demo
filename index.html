@@ -20,6 +20,8 @@
      </div>
    </header>
   
+  <p class="loading">Loading ... please wait</p>
+
   <article id="app">
     <input v-model="input" type="text" id="input" placeholder="enter your text here">
     <div class="simplify">
@@ -53,5 +55,13 @@
     </div>
   </article>
   <script src="./assets/script.js"></script>
+  <style>
+  #app {
+    display: block !important;
+  }
+  .loading {
+    display: none;
+  }
+  </style>
 </body>
 </html>
