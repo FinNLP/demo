@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Fin NLP Demo</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style.css">
+  </head>
+<body>
+
+   <header>
+    <img src="./assets/logo.svg" alt="Fin Natural Language Processor Demo">
+     <div class="links">
+       <a target="_blank" href="http://fin.run">Home</a>
+       <a target="_blank" href="http://docs.fin.run">Documentation</a>
+       <a target="_blank" href="https://github.com/FinNLP/">GitHub</a>
+     </div>
+   </header>
+  
+  <article id="app">
+    <input v-model="input" type="text" id="input" placeholder="enter your text here">
+    <div class="simplify">
+      <input type="checkbox" id="check" v-model="abbr">
+      <label for="check">Abbreviate annotations</label>
+    </div>
+    <div v-for="(sentence,si) in sentences" class="result">
+         <p class="raw">{{sentence.sentence}}</p>
+          <p class="sentence-type"></p>
+           <div class="token-analysis" v-for="(token, index) in sentence.tokens">
+             <div class="token">{{token}}</div>
+             <div class="token-result tag">POS: {{sentence.tags[index]}}</div>
+             <div class="token-result label">Label: {{sentence.deps[index].label}}</div>
+             <div v-if="emphasis[si][index] !== 1" class="token-result emphasis">Emphasis: {{emphasis[si][index]}}</div>
+             <div v-if="negation[si][index]" class="token-result negation">Negated</div>
+             <div v-if="sentiment[si][index]" class="token-result sentiment">Sentiment: {{sentiment[si][index]}}</div>
+             <div v-if="ukus[si][index]" class="token-result ukus">{{ukus[si][index]>0?"British":"American"}}</div>
+           </div>
+      <div class="legend">
+        Legend:
+        <span class="tag">Part of speech tag</span>
+        <span class="label">Dependency label</span>
+        <span class="emphasis">Emphasis</span>
+        <span class="negation">Negation</span>
+        <span class="sentiment">Sentiment</span>
+        <span class="ukus">Spelling variation</span>
+      </div>
+      <hr>
+      <p>Dependency Tree Visualization</p>
+      <div class="tree" :id="'tree'+si"></div>
+    </div>
+  </article>
+  <script src="./assets/script.js"></script>
+</body>
+</html>

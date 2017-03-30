@@ -1,0 +1,25 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "Demo",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Corvi",
+  "license": "MIT",
+  "dependencies": {
+    "fin-emphasis": "^1.0.5",
+    "fin-html-entities": "^1.0.2",
+    "fin-negation": "^1.0.4",
+    "fin-sentence-type": "^1.0.3",
+    "fin-sentiment": "^1.0.3",
+    "fin-slang": "^1.0.2",
+    "fin-ukus": "^1.0.1",
+    "fin-urls": "^1.0.4",
+    "finnlp": "^1.0.28"
+  },
+  "devDependencies": {
+    "buble-loader": "^0.4.1"
+  }
+}
