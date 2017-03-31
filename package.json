@@ -11,9 +11,9 @@
   "dependencies": {
     "fin-emphasis": "^1.0.6",
     "fin-html-entities": "^1.0.2",
-    "fin-negation": "^1.0.6",
+    "fin-negation": "^1.0.7",
     "fin-sentence-type": "^1.0.3",
-    "fin-sentiment": "^1.0.3",
+    "fin-sentiment": "^1.0.6",
     "fin-slang": "^1.0.2",
     "fin-ukus": "^1.0.1",
     "fin-urls": "^1.0.4",
