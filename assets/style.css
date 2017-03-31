@@ -60,7 +60,7 @@ header .links a:hover {
 .raw {
 	text-align:left;
 	border-bottom:1px solid #e3e3e3;
-	padding-bottom:5px;
+	padding-bottom: 15px;
 }
 	
 .token-analysis {
@@ -138,4 +138,15 @@ div.token {
 	margin-top:20vh;
 }
 
-
+.raw span {
+	background: #3F51B5;
+	padding: 5px 10px;
+	margin-left: 10px;
+	border-radius: 3px;
+	color:#fff;
+	font-size: 13px;
+	position: relative;
+	float: right;
+	top: -5px;
+	box-shadow: 0 0 20px rgba(63, 81, 181, 0.4);
+}

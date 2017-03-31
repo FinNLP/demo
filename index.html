@@ -29,11 +29,7 @@
       <label for="check">Abbreviate annotations</label>
     </div>
     <div v-for="(sentence,si) in sentences" class="result">
-         <p class="raw">{{sentence.sentence}}</p>
-          <p class="sentence-type">
-            Possible Sentence Type: 
-            <span v-for="type in types[si]">{{type.type}}/{{type.confidence}}</span>&nbsp;&nbsp;&nbsp;
-          </p>
+         <p class="raw">{{sentence.sentence}} <span v-for="type in types[si]">{{type.type}} / confidence: {{type.confidence}}</span></p>
            <div class="token-analysis" v-for="(token, index) in sentence.tokens">
              <div class="token">{{token}}</div>
              <div class="token-result tag">POS: {{sentence.tags[index]}}</div>

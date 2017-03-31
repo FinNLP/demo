@@ -9,9 +9,9 @@
   "author": "Alex Corvi",
   "license": "MIT",
   "dependencies": {
-    "fin-emphasis": "^1.0.5",
+    "fin-emphasis": "^1.0.6",
     "fin-html-entities": "^1.0.2",
-    "fin-negation": "^1.0.4",
+    "fin-negation": "^1.0.6",
     "fin-sentence-type": "^1.0.3",
     "fin-sentiment": "^1.0.3",
     "fin-slang": "^1.0.2",
